@@ -92,6 +92,9 @@ class Window(QWidget):
 
             self.textLine.setText(str(r))
 
+    def keyPressEvent(self,e):
+        if e.key() == Qt.Key_Enter or e.key() == Qt.Key_Return:
+            self.calc("=")
 
 
 
