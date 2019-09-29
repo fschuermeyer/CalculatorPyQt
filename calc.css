@@ -1,0 +1,48 @@
+*{
+    background: white;
+}
+
+QPushButton{
+    border: none;
+    background: rgb(168, 68, 68);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+QPushButton:hover{
+    background: rgb(236, 99, 99);
+}
+
+
+QLineEdit{
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+QLineEdit:focus{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.gridBase{
+    margin: 10px;
+}
+
+#pushbutton15{
+    background: orange;
+}
+
+#pushbutton15:hover{
+    background: rgb(255, 208, 120)
+}
+
+#pushbutton4,#pushbutton5,#pushbutton6,#pushbutton8,#pushbutton9,#pushbutton10,#pushbutton12,#pushbutton13,#pushbutton14{
+    background: lightskyblue;
+}
+
+#pushbutton4:hover,#pushbutton5:hover,#pushbutton6:hover,#pushbutton8:hover,#pushbutton9:hover,#pushbutton10:hover,#pushbutton12:hover,#pushbutton13:hover,#pushbutton14hover{
+    background: rgb(82, 144, 182);
+}
