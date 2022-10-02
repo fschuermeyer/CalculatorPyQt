@@ -39,8 +39,7 @@ class Window(QWidget):
             c += 1
         
         self.textLine = QLineEdit("")
-        self.textLine
-        # self.textLine.setAttribute(Qt.WA_MacShowFocusRect,0)
+        self.textLine.setAttribute(Qt.WidgetAttribute.WA_MacShowFocusRect,0)
         self.textLine.textEdited.connect(self.onlyDefined)
 
         gridLayout.addWidget(self.textLine,0,0,1,4)
@@ -94,9 +93,8 @@ class Window(QWidget):
             self.textLine.setText(str(r))
 
     def keyPressEvent(self,e):
-        print(e.key())
-        # if e.key() == Qt.Key_Return:
-        #     self.calc("=")
+        if e.key() == Qt.Key.Key_Return or e.key() == Qt.Key.Key_Enter:
+            self.calc("=")
 
 app = QApplication(sys.argv)
 
