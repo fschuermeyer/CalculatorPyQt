@@ -1,8 +1,8 @@
 import sys
 
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
+from PyQt6.QtWidgets import *
+from PyQt6.QtGui import *
+from PyQt6.QtCore import *
 from calc import Calculator
 
 class Window(QWidget):
@@ -39,7 +39,8 @@ class Window(QWidget):
             c += 1
         
         self.textLine = QLineEdit("")
-        self.textLine.setAttribute(Qt.WA_MacShowFocusRect,0)
+        self.textLine
+        # self.textLine.setAttribute(Qt.WA_MacShowFocusRect,0)
         self.textLine.textEdited.connect(self.onlyDefined)
 
         gridLayout.addWidget(self.textLine,0,0,1,4)
@@ -93,13 +94,12 @@ class Window(QWidget):
             self.textLine.setText(str(r))
 
     def keyPressEvent(self,e):
-        if e.key() == Qt.Key_Enter or e.key() == Qt.Key_Return:
-            self.calc("=")
-
-
+        print(e.key())
+        # if e.key() == Qt.Key_Return:
+        #     self.calc("=")
 
 app = QApplication(sys.argv)
 
 w = Window()
 
-sys.exit(app.exec_())
+sys.exit(app.exec())

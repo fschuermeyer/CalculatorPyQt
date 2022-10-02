@@ -14,17 +14,18 @@ QPushButton:hover{
     background: rgb(236, 99, 99);
 }
 
-
 QLineEdit{
     border: none;
     outline: none;
     font-size: 20px;
+    color: #292929;
 }
 
 QLineEdit:focus{
     outline: none;
     border: none;
     border-radius: 10px;
+    color: #292929;
 }
 
 .gridBase{
