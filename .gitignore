@@ -1,4 +1,6 @@
 __pycache__
 lib
 bin
+build
 pyvenv.cfg
+.DS_Store

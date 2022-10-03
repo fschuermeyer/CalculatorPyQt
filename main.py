@@ -1,3 +1,4 @@
+import os
 import sys
 
 from PyQt6.QtWidgets import *
@@ -9,6 +10,7 @@ class Window(QWidget):
 
     liste = ["+","-","/","*","1","2","3","AC","4","5","6","0","7","8","9","="]
     extraOperator = ["+/-","=","AC"]
+    current_dir = os.path.dirname(os.path.realpath(__file__))
 
     def __init__(self):
         super(QWidget,self).__init__()
@@ -45,7 +47,10 @@ class Window(QWidget):
         gridLayout.addWidget(self.textLine,0,0,1,4)
 
         self.setLayout(gridLayout)
-        self.setStyleSheet(open("calc.css","r").read())
+        
+        filename = os.path.join(self.current_dir, "style/calc.css")
+
+        self.setStyleSheet(open(filename,"r").read())
  
         self.show()
 
